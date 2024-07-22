@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: white;
+}
+
+:root {
+    --main-color: #ffba08;
+    --text-color:#fff;
+    --bg-color: black;
+    --big-font: 5rem;
+    --h2-font: 2.25rem;
+    --p-font: 0.9rem;
+}
+
+*::selection {
+    background: var(--main-color);
+    color: #fff;
+}
+
+body {
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 170px;
+    background-color: rgb(21, 20, 20);
+    height: 80px;
+
+}
+
+#menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+
+
+.logo {
+    color: var(--main-color);
+    font-weight: 600;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    list-style: none;
+    
+}
+
+.navbar .welcome {
+    margin-left: 10px;
+    color: #ffba08;
+}
+
+.navbar li a.active {
+    background-color: #ffba08;
+    border-radius: 4px;
+    color: black;
+}
+
+
+.navbar a {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+    transition: .4s;
+}
+
+p {
+    margin: 10px;
+}
+
+i {
+    color: #ffba08;
+}
+
+.container {
+    display: flex;
+    justify-content: center;  /* Center horizontally */
+    height: 100vh;
+    align-items: center;      /* Center vertically */
+    padding: 20px;
+    max-width: 100%;
+}
+
+.form {
+    display: block;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.form:hover {
+    
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+input {
+    display: block;
+    width: calc(100% - 28px);
+    padding: 14px;
+    margin: 10px auto;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+    border-color: #ffba08;
+    box-shadow: 0 0 8px rgba(255, 186, 8, 0.3);
+    outline: none;
+}
+
+button {
+    background-color: #ffba08;
+    padding: 12px 20px;
+    margin: 10px;
+    cursor: pointer;
+    width: calc(100% - 28px);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #e3a813;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+
+.notification {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    text-align: center;
+    color: blue;
+}
+
+.welcome {
+    color: #ffba08;
+}

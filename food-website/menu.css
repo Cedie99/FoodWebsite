@@ -1,0 +1,302 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: white;
+}
+
+:root {
+    --main-color: #ffba08;
+    --text-color:#fff;
+    --bg-color: black;
+    --big-font: 5rem;
+    --h2-font: 2.25rem;
+    --p-font: 0.9rem;
+}
+
+*::selection {
+    background: var(--main-color);
+    color: #fff;
+}
+
+body {
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 170px;
+    background-color: rgb(21, 20, 20);
+    height: 80px;
+
+}
+
+#menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+
+
+.logo {
+    color: var(--main-color);
+    font-weight: 600;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    list-style: none;
+    
+}
+
+.navbar .welcome {
+    margin-left: 10px;
+    color: #ffba08;
+}
+
+.navbar li a.active {
+    background-color: #ffba08;
+    border-radius: 4px;
+    color: black;
+}
+
+
+
+.navbar a {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+    transition: .4s;
+}
+
+
+@media (max-width: 1560px) {
+    header {
+        padding: 15px 40px;
+    }
+    :root {
+        --big-font: 3.5rem;
+        --h2-font: 2rem;
+    }
+}
+
+@media (max-width: 1140px) {
+    section {
+       padding: 50px 8%;
+    }
+
+    #menu-icon {
+        display: initial;
+        color: var(--text-color);
+    }
+
+    header .navbar {
+        position: absolute;
+        top: -500px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background: #2b2640;
+        transition: .3s;
+    }
+
+    header .navbar.active {
+        top: 70px;
+        background-color: rgb(21, 20, 20);
+
+    }
+
+    .navbar a {
+        padding: 1.5rem;
+        display: block;
+    }
+}
+
+@media (max-width: 720px){
+    header {
+        padding: 10px 16px;
+
+    }
+
+    
+}
+
+
+@media (max-width: 575px) {
+
+}
+
+
+.menu {
+    width: 100%;
+    padding: 70px 0;
+    margin-top: 50px;
+    margin-bottom: -150px;
+}
+
+.menu h1 {
+    font-size: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+
+}
+
+.menu h2 {
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.menu h1 span {
+    color: #ffba08;
+    margin-left: 15px;
+    font-family: mv boli;
+}
+
+.menu h1 span::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #ffba08;
+    display: block;
+    position: relative;
+    bottom: 15px;
+}
+
+.menu .menu_box {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 15px;
+}
+
+.menu .menu_box .menu_card {
+    width: 325px;
+    height: 520px;
+    padding-top: 10px;
+    margin-bottom: 90px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: #FFF7FC;
+    border-radius: 16px;
+    flex-grow: 1;
+    flex-basis: 300;
+}
+
+.menu .menu_box .menu_card .menu_image {
+    width: 300px;
+    height: 245px;
+    margin: 0 auto;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.menu .menu_box .menu_card .menu_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.3s;
+    border-radius: 16px;
+}
+
+.menu .menu_box .menu_card .menu_image:hover img {
+    transform: scale(1.5);
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+.modal img {
+    max-width: 50%;
+    max-height: 90%;
+    border-radius: 16px;
+}
+
+.menu .menu_box .menu_card .menu_info {
+    margin: 10px;
+    padding: 10px;
+}
+
+.menu .menu_box .menu_card .menu_info h2 {
+    display: inline;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    text-align: center;
+    margin: auto;
+    font-size: 20px;
+    color:  black;
+    vertical-align: middle;
+}
+
+.menu .menu_box .menu_card .menu_info p {
+    font-size: 12px;
+    text-align: center;
+    margin: 8px;
+    line-height: 21px;
+    color: black;
+}
+
+.menu .menu_box .menu_card .menu_info h3 {
+    text-align: center;
+    margin: 16px;
+    color: black;
+}
+
+.menu .menu_box .menu_card button {
+    display: block;
+    width: 80%;
+    margin: auto;
+    margin-top: 8px;
+    padding: 10px;
+    background-color: #ffba08;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.menu .menu_box .menu_card button:hover {
+    background-color: #c48c00;
+}
